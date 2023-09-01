@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS public.banks
+(
+    id integer NOT NULL,
+    bank_name character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT banks_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.banks
+    OWNER to postgres;

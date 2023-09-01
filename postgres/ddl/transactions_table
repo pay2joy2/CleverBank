@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS public.transactions
+(
+    uuid uuid NOT NULL,
+    account_id integer NOT NULL,
+    type text COLLATE pg_catalog."default" NOT NULL,
+    amount numeric NOT NULL,
+    counterparty_account_id integer,
+    created_at timestamp without time zone NOT NULL DEFAULT now(),
+    CONSTRAINT transactions_pkey PRIMARY KEY (uuid),
+    CONSTRAINT transactions_account_id_fkey FOREIGN KEY (account_id)
+        REFERENCES public.accounts (account_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE,
+    CONSTRAINT transactions_counterparty_account_id_fkey FOREIGN KEY (account_id)
+        REFERENCES public.accounts (account_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.transactions
+    OWNER to postgres;

@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS public.accounts
+(
+    account_id integer NOT NULL,
+    balance numeric NOT NULL,
+    users_id integer NOT NULL,
+    banks_id integer NOT NULL,
+    created_date timestamp without time zone NOT NULL DEFAULT now(),
+    CONSTRAINT banks_users_pk PRIMARY KEY (users_id, banks_id),
+    CONSTRAINT accounts_account_id_key UNIQUE (account_id),
+    CONSTRAINT accounts_banks_id_fkey FOREIGN KEY (banks_id)
+        REFERENCES public.banks (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE,
+    CONSTRAINT accounts_users_id_fkey FOREIGN KEY (users_id)
+        REFERENCES public.users (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.accounts
+    OWNER to postgres;
