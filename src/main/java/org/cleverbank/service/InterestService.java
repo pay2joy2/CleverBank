@@ -72,8 +72,8 @@ public class InterestService {
                 accountService.updateAccount(account);
             }
             previousMonth = LocalDate.now().getMonthValue();
-            System.out.println("CHECKED, UPDATED");
+            System.out.println("INTEREST CHECKED, UPDATED");
         }
-        System.out.println("CHECKED, NOT UPDATED");
+        System.out.println("INTEREST CHECKED, NOT UPDATED");
     }
 }
