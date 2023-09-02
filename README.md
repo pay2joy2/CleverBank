@@ -36,6 +36,11 @@ CRUD operations for entities: Banks, Users, Accounts, Transactions.
 
 <h1> <b> Usage --- Postman commands </b> </h1>
 
+/users
 
+| GET          | POST              | PUT               | DEL          |
+|--------------|-------------------|-------------------|--------------|
+| "id":"(int)" | "id":"(int)"      | "id":"(int)"      | "id":"(int)" |
+|              | "name":"(String)" | "name":"(String)" |              |
 
 
