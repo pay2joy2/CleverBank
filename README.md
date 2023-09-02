@@ -37,10 +37,19 @@ CRUD operations for entities: Banks, Users, Accounts, Transactions.
 <h1> <b> Usage --- Postman commands </b> </h1>
 
                        <h2> <b> "/users" <b> </h2>
+                       
 
-| GET          | POST              | PUT               | DEL          |
-|--------------|-------------------|-------------------|--------------|
-| "id":"(int)" | "id":"(int)"      | "id":"(int)"      | "id":"(int)" |
-|              | "name":"(String)" | "name":"(String)" |              |
+| GET            | POST              | PUT               | DEL               |
+|----------------|-------------------|-------------------|-------------------|
+| "id":"(int)"   | "id":"(int)"      | "id":"(int)"      | "id":"(int)"      |
+|                | "name":"(String)" | "name":"(String)" |                   |
+| Get user by id | Create user       | Update users name | Delete user by id |
+
+                      <h2> <b> "/users" <b> </h2>
+
+
+
+
+
 
 
