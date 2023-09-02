@@ -36,7 +36,7 @@ CRUD operations for entities: Banks, Users, Accounts, Transactions.
 
 <h1> <b> Usage --- Postman commands </b> </h1>
 
-/users
+                       <h2> <b> "/users" <b> </h2>
 
 | GET          | POST              | PUT               | DEL          |
 |--------------|-------------------|-------------------|--------------|
