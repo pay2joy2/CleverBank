@@ -106,9 +106,7 @@ CRUD operations for entities: Banks, Users, Accounts.
 |                             | "amount":"(double)"                        |
 | Gets info about transaction | Transaction operation between two accounts |
 
-
-
-
+Interest servlet starts automatically with server startup.
 
 
 
