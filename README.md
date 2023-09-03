@@ -97,6 +97,14 @@ CRUD operations for entities: Banks, Users, Accounts, Transactions.
 |            "account_id":"(int)"           |
 | "TimePeriod":"Whole" OR "Year" OR "Month" |
 
+<p1> <b> "/transaction" </b> </p1>
+
+|             GET             |                    POST                    |
+|:---------------------------:|:------------------------------------------:|
+|  "transaction_id":"(uuid)"  | "AccountToId":"(int)"                      |
+|                             | "AccountFromId":"(int)"                    |
+|                             | "amount":"(double)"                        |
+| Gets info about transaction | Transaction operation between two accounts |
 
 
 
