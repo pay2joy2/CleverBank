@@ -25,7 +25,7 @@ Project for trainee position:
 - Interest calculation function - every 30 seconds scans all accounts, the interest is calculated depending on the value of "InterestRate" in the ```src/main/resources/config.yaml``` file.
   It is calculated on every last day of the month
 
-CRUD operations for entities: Banks, Users, Accounts, Transactions.
+CRUD operations for entities: Banks, Users, Accounts.
   
 <h1>
 <b> Set-up </b>
