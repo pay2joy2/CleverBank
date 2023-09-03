@@ -107,6 +107,7 @@ public class StatementMoneyServlet  extends HttpServlet  {
             Document document = new Document();
             try {
                 PdfWriter.getInstance(document, new FileOutputStream(filePath));
+                System.out.println("Statement formed in: " + filePath);
             } catch (DocumentException e) {
                 throw new RuntimeException(e);
             } catch (IOException e) {
